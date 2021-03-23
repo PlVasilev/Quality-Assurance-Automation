@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Selenium_Testing.PageObjects.BasePage">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAABAABAAAJAAAAAAIAACAAAAAggAAAAAAAAEAAgA=</HashCode>
+      <FileName>PageObjects\BasePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Selenium_Testing.PageObjects.AddStudentPage">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAQAAAAAAAAAACAAAAAAAAACAAgAAAAAAAICAAAAA=</HashCode>
+      <FileName>PageObjects\AddStudentPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Selenium_Testing.PageObjects.HomePage">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAACAA=</HashCode>
+      <FileName>PageObjects\HomePage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Selenium_Testing.PageObjects.ViewStudentsPage">
+    <Position X="10.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAACAEAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageObjects\ViewStudentsPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
