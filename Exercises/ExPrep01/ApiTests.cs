@@ -57,6 +57,21 @@ namespace ExPrep01
             IRestResponse response = client.Execute(request);
             var shortUrl = new JsonDeserializer().Deserialize<ShortUrlClass>(response);
 
+            //Object Equality
+            var expectedResult = new ShortUrlStr
+            {
+                Url = "https://nakov.com",
+                ShortCode = "nak",
+                ShortUrl = "http://shorturl.plvasilev.repl.co/go/nak",
+                DateCreated = "2021-02-17T14:41:33Z",
+                Visits = 160
+            };
+            var expectedStr = new JsonDeserializer().Serialize(shortUrl);
+            var actualStr = new JsonDeserializer().Serialize(expectedResult);
+
+            Assert.AreEqual(expectedStr, actualStr);
+
+
             Assert.AreEqual(shortUrl.Url, "https://nakov.com");
             Assert.AreEqual(shortUrl.ShortCode, "nak");
             Assert.AreEqual(shortUrl.ShortUrl, $"http://shorturl.plvasilev.repl.co/go/{shortCode}");

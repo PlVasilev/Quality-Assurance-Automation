@@ -16,7 +16,9 @@ namespace ExPrep01
             var options = new AppiumOptions {PlatformName = "Android"};
             // To install app first
             options.AddAdditionalCapability("app",
-                @"{Path to App}");
+                @"Path to App");
+            // options.AddAdditionalCapability("appPackage", "vivino.web.app");
+            // options.AddAdditionalCapability("appActivity", "com.sphinx_solution.activities.SplashActivity");
             _driver = new AndroidDriver<AndroidElement>(new Uri("http://[::1]:4723/wd/hub"), options);
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
         }
