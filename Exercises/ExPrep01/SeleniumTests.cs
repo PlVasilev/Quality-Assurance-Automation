@@ -10,7 +10,8 @@ namespace ExPrep01
     public class SeleniumTests
     {
         protected RemoteWebDriver _driver;
-        private const string BaseUrl = "https://shorturl-1.plvasilev.repl.co";
+        private const string BaseUrl = "https://shorturl.plvasilev.repl.co";
+        private const string ShortUrl = "http://shorturl.plvasilev.repl.co";
         private const string NewUrlShortCode = "New104";
         private const string NewUrl = "https://NewSite104.Url";
 
@@ -132,7 +133,7 @@ namespace ExPrep01
             {
                 var tableData = rows[i].FindElements(By.CssSelector("td"));
                 var shortUlr = tableData[1].Text;
-                var searchedShortUrl = $"http://shorturl-1.plvasilev.repl.co/go/{NewUrlShortCode}";
+                var searchedShortUrl = $"{ShortUrl}/go/{NewUrlShortCode}";
                 if (shortUlr == searchedShortUrl)
                 {
                     visitsCount = int.Parse(tableData[3].Text);
@@ -147,7 +148,7 @@ namespace ExPrep01
             for (int i = 1; i < rows.Count; i++)
             {
                 var tableData = rows[i].FindElements(By.CssSelector("td"));
-                if (tableData[1].Text == $"http://shorturl-1.plvasilev.repl.co/go/{NewUrlShortCode}")
+                if (tableData[1].Text == $"{ShortUrl}/go/{NewUrlShortCode}")
                 {
                     newVisitsCount = int.Parse(tableData[3].Text);
                     tableData[1].Click();
@@ -164,7 +165,7 @@ namespace ExPrep01
 
             _driver.FindElementByXPath("//a[@href='/urls']").Click();
             Thread.Sleep(1000);
-            _driver.Navigate().GoToUrl($"http://shorturl-1.plvasilev.repl.co/go/{NewUrlShortCode}aaaa");
+            _driver.Navigate().GoToUrl($"{ShortUrl}/go/{NewUrlShortCode}aaaa");
             var errMsg = _driver.FindElementByClassName("err").Text;
             Assert.AreEqual("Invalid short code!", errMsg);
         }
