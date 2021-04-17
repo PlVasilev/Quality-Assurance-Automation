@@ -21,6 +21,7 @@ namespace ExPrep01
             var options = new ChromeOptions();
             options.AddArgument("--headless");
             _driver = new ChromeDriver(options) { Url = BaseUrl };
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
         }
 
         [OneTimeTearDown]

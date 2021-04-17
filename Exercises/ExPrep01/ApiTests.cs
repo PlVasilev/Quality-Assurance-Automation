@@ -9,7 +9,7 @@ namespace ExPrep01
 {
     public class ApiTests
     {
-        private const string BaseUrl = "https://shorturl.plvasilev.repl.co/api/";
+        private const string BaseUrl = "https://shorturl.{yourName}.repl.co/api/";
         private const string NewUrlShortCode = "New101";
         private const string NewUrl = "https://NewSite101.Url";
 
